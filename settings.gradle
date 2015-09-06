@@ -1,1 +1,1 @@
-include ':Interface', ':Model', ':InferenceEngine', ':knowledgedatabase'
+include ':Interface', ':Model', ':InferenceEngine', ':KnowledgeDatabase'

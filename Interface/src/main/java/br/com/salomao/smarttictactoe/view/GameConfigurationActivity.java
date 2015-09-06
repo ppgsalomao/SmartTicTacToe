@@ -1,6 +1,7 @@
 package br.com.salomao.smarttictactoe.view;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
@@ -45,6 +46,10 @@ public class GameConfigurationActivity extends AppCompatActivity {
         this.resetScreenStateToDefault();
     }
 
+    public int getCompatColor(int colorResourceId) {
+        return ContextCompat.getColor(this, colorResourceId);
+    }
+
     private void resetScreenStateToDefault() {
         this.gameConfiguration = new GameConfiguration();
 
@@ -64,23 +69,23 @@ public class GameConfigurationActivity extends AppCompatActivity {
         // Set the color for the selected button
         switch (gameLevel) {
             case MEDIUM:
-                this.levelMediumButton.setBackgroundColor(this.getResources().getColor(R.color.light_yellow));
-                this.levelMediumButton.setTextColor(this.getResources().getColor(R.color.dark_yellow));
+                this.levelMediumButton.setBackgroundColor(this.getCompatColor(R.color.light_yellow));
+                this.levelMediumButton.setTextColor(this.getCompatColor(R.color.dark_yellow));
                 break;
             case HARD:
-                this.levelHardButton.setBackgroundColor(this.getResources().getColor(R.color.light_red));
-                this.levelHardButton.setTextColor(this.getResources().getColor(R.color.dark_red));
+                this.levelHardButton.setBackgroundColor(this.getCompatColor(R.color.light_red));
+                this.levelHardButton.setTextColor(this.getCompatColor(R.color.dark_red));
                 break;
             case EASY:
             default:
-                this.levelEasyButton.setBackgroundColor(this.getResources().getColor(R.color.light_green));
-                this.levelEasyButton.setTextColor(this.getResources().getColor(R.color.dark_green));
+                this.levelEasyButton.setBackgroundColor(this.getCompatColor(R.color.light_green));
+                this.levelEasyButton.setTextColor(this.getCompatColor(R.color.dark_green));
         }
     }
 
     private void resetLevelButtonDefault(Button button) {
-        button.setBackgroundColor(this.getResources().getColor(R.color.light_gray));
-        button.setTextColor(this.getResources().getColor(R.color.dark_gray));
+        button.setBackgroundColor(this.getCompatColor(R.color.light_gray));
+        button.setTextColor(this.getCompatColor(R.color.dark_gray));
     }
 
     private void chooseUserSymbol(SymbolEnum symbol) {
@@ -93,19 +98,19 @@ public class GameConfigurationActivity extends AppCompatActivity {
         // Set the color for the selected button
         switch (symbol) {
             case O:
-                this.symbolOButton.setBackgroundColor(this.getResources().getColor(R.color.light_red));
-                this.symbolOButton.setTextColor(this.getResources().getColor(R.color.dark_red));
+                this.symbolOButton.setBackgroundColor(this.getCompatColor(R.color.light_red));
+                this.symbolOButton.setTextColor(this.getCompatColor(R.color.dark_red));
                 break;
             case X:
             default:
-                this.symbolXButton.setBackgroundColor(this.getResources().getColor(R.color.light_blue));
-                this.symbolXButton.setTextColor(this.getResources().getColor(R.color.dark_blue));
+                this.symbolXButton.setBackgroundColor(this.getCompatColor(R.color.light_blue));
+                this.symbolXButton.setTextColor(this.getCompatColor(R.color.dark_blue));
         }
     }
 
     private void resetSymbolButtonDefault(Button button) {
-        button.setBackgroundColor(this.getResources().getColor(R.color.light_gray));
-        button.setTextColor(this.getResources().getColor(R.color.dark_gray));
+        button.setBackgroundColor(this.getCompatColor(R.color.light_gray));
+        button.setTextColor(this.getCompatColor(R.color.dark_gray));
     }
 
     private void chooseGameStarter(GameStarterEnum gameStarter) {
@@ -118,19 +123,19 @@ public class GameConfigurationActivity extends AppCompatActivity {
         // Set the color for the selected button
         switch (this.gameConfiguration.getGameStarter()) {
             case COMPUTER:
-                this.gameStarterComputerButton.setBackgroundColor(this.getResources().getColor(R.color.light_blue_gray));
-                this.gameStarterComputerButton.setTextColor(this.getResources().getColor(R.color.dark_blue_gray));
+                this.gameStarterComputerButton.setBackgroundColor(this.getCompatColor(R.color.light_blue_gray));
+                this.gameStarterComputerButton.setTextColor(this.getCompatColor(R.color.dark_blue_gray));
                 break;
             case USER:
             default:
-                this.gameStarterUserButton.setBackgroundColor(this.getResources().getColor(R.color.light_blue_gray));
-                this.gameStarterUserButton.setTextColor(this.getResources().getColor(R.color.dark_blue_gray));
+                this.gameStarterUserButton.setBackgroundColor(this.getCompatColor(R.color.light_blue_gray));
+                this.gameStarterUserButton.setTextColor(this.getCompatColor(R.color.dark_blue_gray));
         }
     }
 
     private void resetGameStarterButtonDefault(Button button) {
-        button.setBackgroundColor(this.getResources().getColor(R.color.light_gray));
-        button.setTextColor(this.getResources().getColor(R.color.dark_gray));
+        button.setBackgroundColor(this.getCompatColor(R.color.light_gray));
+        button.setTextColor(this.getCompatColor(R.color.dark_gray));
     }
 
     @OnClick({ R.id.game_configuration_level_easy_button,

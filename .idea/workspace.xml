@@ -10,16 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0501374-e197-494e-bf9f-6b4092aeefa5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/configuration/GameLevelEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/configuration/GameStarterEnum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/configuration/SymbolEnum.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameLevelEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameStarterEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/SymbolEnum.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameConfiguration.java" afterPath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/configuration/GameConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameActivity.java" afterPath="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KnowledgeDatabase/KnowledgeDatabase.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_22_2_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java" afterPath="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameState.java" afterPath="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InferenceEngine/InferenceEngine.iml" afterPath="$PROJECT_DIR$/InferenceEngine/InferenceEngine.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface/Interface.iml" afterPath="$PROJECT_DIR$/Interface/Interface.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java" afterPath="$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InferenceEngine/build.gradle" afterPath="$PROJECT_DIR$/InferenceEngine/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface/build.gradle" afterPath="$PROJECT_DIR$/Interface/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KnowledgeDatabase/build.gradle" afterPath="$PROJECT_DIR$/KnowledgeDatabase/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartTicTacToe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,12 +86,12 @@
                 <option name="path" value="$PROJECT_DIR$/Model" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":knowledgedatabase" />
-                <option name="path" value="$PROJECT_DIR$/KnowledgeDatabase" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value=":InferenceEngine" />
                 <option name="path" value="$PROJECT_DIR$/InferenceEngine" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":KnowledgeDatabase" />
+                <option name="path" value="$PROJECT_DIR$/KnowledgeDatabase" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value="SmartTicTacToe" />
@@ -583,6 +588,11 @@
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare SmartTicTacToe:KnowledgeDatabase:unspecified" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareSmartTicTacToeKnowledgeDatabaseUnspecifiedLibrary" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processDebugAndroidTestJavaRes" />
               </ExternalTaskPojo>
@@ -708,14 +718,9 @@
                 <option name="name" value="preDexRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:appcompat-v7:22.2.1" />
+                <option name="description" value="Prepare SmartTicTacToe:InferenceEngine:unspecified" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportAppcompatV72221Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.2.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportSupportV42221Library" />
+                <option name="name" value="prepareSmartTicTacToeInferenceEngineUnspecifiedLibrary" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Debug build." />
@@ -1233,6 +1238,11 @@
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare SmartTicTacToe:KnowledgeDatabase:unspecified" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/InferenceEngine" />
+                <option name="name" value="prepareSmartTicTacToeKnowledgeDatabaseUnspecifiedLibrary" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/InferenceEngine" />
                 <option name="name" value="processDebugAndroidTestJavaRes" />
               </ExternalTaskPojo>
@@ -1724,14 +1734,14 @@
                 <option name="name" value="preReleaseUnitTestBuild" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:appcompat-v7:22.2.1" />
+                <option name="description" value="Prepare com.android.support:appcompat-v7:23.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
-                <option name="name" value="prepareComAndroidSupportAppcompatV72221Library" />
+                <option name="name" value="prepareComAndroidSupportAppcompatV72300Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:support-v4:22.2.1" />
+                <option name="description" value="Prepare com.android.support:support-v4:23.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
-                <option name="name" value="prepareComAndroidSupportSupportV42221Library" />
+                <option name="name" value="prepareComAndroidSupportSupportV42300Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
@@ -1752,6 +1762,16 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
                 <option name="name" value="prepareReleaseUnitTestDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare SmartTicTacToe:InferenceEngine:unspecified" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
+                <option name="name" value="prepareSmartTicTacToeInferenceEngineUnspecifiedLibrary" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare SmartTicTacToe:KnowledgeDatabase:unspecified" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
+                <option name="name" value="prepareSmartTicTacToeKnowledgeDatabaseUnspecifiedLibrary" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/Interface" />
@@ -2036,7 +2056,7 @@
                 <option name="name" value="compileReleaseUnitTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by project ':knowledgedatabase'. [incubating]" />
+                <option name="description" value="Displays the components produced by project ':KnowledgeDatabase'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
@@ -2064,12 +2084,12 @@
                 <option name="name" value="copyReleaseLint" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in project ':knowledgedatabase'." />
+                <option name="description" value="Displays all dependencies declared in project ':KnowledgeDatabase'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in project ':knowledgedatabase'." />
+                <option name="description" value="Displays the insight into a specific dependency in project ':KnowledgeDatabase'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
@@ -2220,7 +2240,7 @@
                 <option name="name" value="mockableAndroidJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of project ':knowledgedatabase'. [incubating]" />
+                <option name="description" value="Displays the configuration model of project ':KnowledgeDatabase'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
@@ -2371,12 +2391,12 @@
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of project ':knowledgedatabase'." />
+                <option name="description" value="Displays the sub-projects of project ':KnowledgeDatabase'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of project ':knowledgedatabase'." />
+                <option name="description" value="Displays the properties of project ':KnowledgeDatabase'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
@@ -2391,7 +2411,7 @@
                 <option name="name" value="sourceSets" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from project ':knowledgedatabase'." />
+                <option name="description" value="Displays the tasks runnable from project ':KnowledgeDatabase'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/KnowledgeDatabase" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
@@ -4302,7 +4322,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="8649393052000" />
+        <entry key="$PROJECT_DIR$" value="8649440179000" />
         <entry key="$USER_HOME$/Downloads/Aulas_Android_Camera" value="4259181740000" />
       </map>
     </option>
@@ -4486,7 +4506,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.0.0/appcompat-v7-23.0.0.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.0/da7ba0ee1d30edd955da276cdf01d3d7cb24aedc/dagger-2.0.jar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.0.0/support-v4-23.0.0.aar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
                             <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar" />
                           </list>
                         </option>
@@ -4577,12 +4599,12 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/22.2.1/appcompat-v7-22.2.1.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.0.0/appcompat-v7-23.0.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.0/da7ba0ee1d30edd955da276cdf01d3d7cb24aedc/dagger-2.0.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/22.2.1/support-v4-22.2.1.aar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.0.0/support-v4-23.0.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar" />
+                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/Interface" />
@@ -5278,7 +5300,6 @@
         <option value="$PROJECT_DIR$/UserInterface/src/main/res/layout/activity_game_configuration.xml" />
         <option value="$PROJECT_DIR$/UserInterface/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/UserInterface/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameLevels.java" />
         <option value="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/EntryPointActivity.java" />
         <option value="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/GameConfigurationActivity.java" />
@@ -5297,15 +5318,18 @@
         <option value="$PROJECT_DIR$/Interface/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Interface/src/androidTest/java/br/com/salomao/smarttictactoe/ApplicationTest.java" />
         <option value="$PROJECT_DIR$/Interface/proguard-rules.pro" />
-        <option value="$PROJECT_DIR$/Interface/build.gradle" />
-        <option value="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java" />
         <option value="$PROJECT_DIR$/Interface/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/Interface/src/main/res/layout/activity_game.xml" />
         <option value="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/Position.java" />
-        <option value="$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java" />
         <option value="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameMarkerEnum.java" />
         <option value="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameState.java" />
         <option value="$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/configuration/GameConfiguration.java" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/KnowledgeDatabase/build.gradle" />
+        <option value="$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java" />
+        <option value="$PROJECT_DIR$/InferenceEngine/build.gradle" />
+        <option value="$PROJECT_DIR$/Interface/build.gradle" />
+        <option value="$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java" />
       </list>
     </option>
   </component>
@@ -5350,65 +5374,15 @@
               <option name="myItemId" value="SmartTicTacToe" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SmartTicTacToe" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.NonAndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="SmartTicTacToe" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Interface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartTicTacToe" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Interface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartTicTacToe" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Interface" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -5419,38 +5393,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="InferenceEngine" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartTicTacToe" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InferenceEngine" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmartTicTacToe" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InferenceEngine" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inferenceengine" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -5797,9 +5739,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298292" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -5903,14 +5845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -6006,14 +5940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Interface/build/intermediates/manifests/full/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7692308">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Interface/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65352696">
@@ -6037,25 +5963,6 @@
         <state vertical-scroll-proportion="0.8713693">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Interface/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25311205">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.560166">
-          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
-          <folding>
-            <element signature="e#7677#7678#0" expanded="true" />
-            <element signature="e#7749#7750#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -6086,14 +5993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/main/java/br/com/salomao/smarttictactoe/model/GameMarkerEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.093361">
@@ -6115,8 +6014,8 @@
         <state vertical-scroll-proportion="1.493776">
           <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
           <folding>
-            <element signature="e#2481#2482#0" expanded="true" />
-            <element signature="e#2531#2532#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="false" />
+            <element signature="e#2531#2532#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -6125,6 +6024,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5115962">
           <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="71" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KnowledgeDatabase/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InferenceEngine/src/main/java/br/com/salomao/inferenceengine/TicTacToeGameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InferenceEngine/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v23/values-v23.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032967035">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v23/values-v23.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032967035">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InferenceEngine/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7582418">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1208792">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Interface/src/main/java/br/com/salomao/smarttictactoe/view/GameConfigurationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9834025">
+          <caret line="140" column="57" selection-start-line="140" selection-start-column="57" selection-end-line="140" selection-end-column="57" />
           <folding />
         </state>
       </provider>
