@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Smart TicTacToe</string>
+
+    <!-- Game Configuration -->
+    <string name="game.configuration.title">Configurações do Jogo</string>
+    <string name="game.configuration.level.selectLevel">Selecione o nível de dificuldade:</string>
+    <string name="game.configuration.level.easy">Fácil</string>
+    <string name="game.configuration.level.medium">Intermediário</string>
+    <string name="game.configuration.level.hard">Difícil</string>
+
+    <string name="game.configuration.symbol.selectSymbol">Selecione o símbolo usado pelo usuário:</string>
+    <string name="game.configuration.symbol.x">X</string>
+    <string name="game.configuration.symbol.o">O</string>
+
+    <string name="game.configuration.starter.selectStarter">Selecione quem começa a jogar:</string>
+    <string name="game.configuration.starter.user">Usuário</string>
+    <string name="game.configuration.starter.computer">Computador</string>
+
+    <string name="game.configuration.play">Jogar</string>
+
+    <!-- Game -->
+
+</resources>

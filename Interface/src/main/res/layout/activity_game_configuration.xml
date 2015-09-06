@@ -1,0 +1,138 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.salomao.smarttictactoe.view.GameConfigurationActivity"
+    style="@style/containerStyle"
+    >
+
+    <TextView
+        android:id="@+id/game_configuration_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/game.configuration.title"
+        style="@style/screenTitleStyle"
+        />
+
+    <TextView
+        android:id="@+id/game_configuration_level_select_label_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_configuration_title_text_view"
+        android:text="@string/game.configuration.level.selectLevel"
+        style="@style/configurationLabelStyle"/>
+
+    <LinearLayout
+        android:id="@+id/game_configuration_level_buttons_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/game_configuration_level_select_label_text_view"
+        android:orientation="horizontal">
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_level_easy_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.level.easy"
+            style="@style/configurationLevelButtonStyle"/>
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_level_medium_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.level.medium"
+            style="@style/configurationLevelButtonStyle"/>
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_level_hard_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.level.hard"
+            style="@style/configurationLevelButtonStyle"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/game_configuration_user_symbol_select_label_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_configuration_level_buttons_container_view"
+        android:text="@string/game.configuration.symbol.selectSymbol"
+        style="@style/configurationLabelStyle"/>
+
+    <LinearLayout
+        android:id="@+id/game_configuration_user_symbol_buttons_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/game_configuration_user_symbol_select_label_text_view"
+        android:orientation="horizontal">
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_user_symbol_x_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.symbol.x"
+            style="@style/configurationLevelButtonStyle"/>
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_user_symbol_o_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.symbol.o"
+            style="@style/configurationLevelButtonStyle"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/game_configuration_game_starter_select_label_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_configuration_user_symbol_buttons_container_view"
+        android:text="@string/game.configuration.starter.selectStarter"
+        style="@style/configurationLabelStyle"/>
+
+    <LinearLayout
+        android:id="@+id/game_configuration_game_starter_buttons_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/game_configuration_game_starter_select_label_text_view"
+        android:orientation="horizontal">
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_game_starter_user_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.starter.user"
+            style="@style/configurationLevelButtonStyle"/>
+
+        <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+            android:id="@+id/game_configuration_game_starter_computer_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/game.configuration.starter.computer"
+            style="@style/configurationLevelButtonStyle"/>
+
+    </LinearLayout>
+
+    <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+        android:id="@+id/game_configuration_play_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/game.configuration.play"
+        style="@style/configurationPlayButtonStyle"/>
+
+</RelativeLayout>
