@@ -8,42 +8,45 @@ public class GameState {
 
     public GameState() {
         super();
-
-        this.state = 0x00;
+        this.state = 0x00; // State Empty
     }
 
-    public GameMarkerEnum getPositionMarker(int position) {
-        if(position >= GAME_SLOTS)
+    public GameMarkerEnum getPositionMarker(Position position) {
+        int positionRepresentation = (position.getRow() * 3) + position.getColumn();
+
+        if(positionRepresentation >= GAME_SLOTS)
             throw new IllegalArgumentException("TicTacToe has only "+ GAME_SLOTS + " slots.");
-        if(position < 0)
+        if(positionRepresentation < 0)
             throw new IllegalArgumentException("The position value must be positive.");
 
-        int userPositionHexValue = this.getUserPositionHexValue(position);
+        int userPositionHexValue = this.getUserPositionHexValue(positionRepresentation);
         if((this.state & userPositionHexValue) == userPositionHexValue)
             return GameMarkerEnum.USER;
 
-        int computerPositionHexValue = this.getComputerPositionHexValue(position);
+        int computerPositionHexValue = this.getComputerPositionHexValue(positionRepresentation);
         if((this.state & computerPositionHexValue) == computerPositionHexValue)
             return GameMarkerEnum.COMPUTER;
 
         return GameMarkerEnum.NONE;
     }
 
-    public void markPosition(int position, GameMarkerEnum marker) {
-        if(position >= GAME_SLOTS)
+    public void markPosition(Position position, GameMarkerEnum marker) {
+        int positionRepresentation = (position.getRow() * 3) + position.getColumn();
+
+        if(positionRepresentation >= GAME_SLOTS)
             throw new IllegalArgumentException("TicTacToe has only " + GAME_SLOTS + " slots.");
-        if(position < 0)
+        if(positionRepresentation < 0)
             throw new IllegalArgumentException("The position value must be positive.");
 
         if(marker == null || marker.equals(GameMarkerEnum.NONE)) {
-            state = state & ~this.getUserPositionHexValue(position);        // Remove User Mark
-            state = state & ~this.getComputerPositionHexValue(position);    // Remove Computer Mark
+            state = state & ~this.getUserPositionHexValue(positionRepresentation);        // Remove User Mark
+            state = state & ~this.getComputerPositionHexValue(positionRepresentation);    // Remove Computer Mark
         } else if(marker.equals(GameMarkerEnum.COMPUTER)) {
-            state = state & ~this.getUserPositionHexValue(position);        // Remove User Mark
-            state = (state | this.getComputerPositionHexValue(position));   // Insert Computer Mark
+            state = state & ~this.getUserPositionHexValue(positionRepresentation);        // Remove User Mark
+            state = (state | this.getComputerPositionHexValue(positionRepresentation));   // Insert Computer Mark
         } else if(marker.equals(GameMarkerEnum.USER)) {
-            state = (state | this.getUserPositionHexValue(position));       // Insert User Mark
-            state = state & ~this.getComputerPositionHexValue(position);    // Remove Computer Mark
+            state = (state | this.getUserPositionHexValue(positionRepresentation));       // Insert User Mark
+            state = state & ~this.getComputerPositionHexValue(positionRepresentation);    // Remove Computer Mark
         }
     }
 

@@ -1,4 +1,4 @@
-package br.com.salomao.smarttictactoe.model;
+package br.com.salomao.smarttictactoe.model.configuration;
 
 import java.io.Serializable;
 

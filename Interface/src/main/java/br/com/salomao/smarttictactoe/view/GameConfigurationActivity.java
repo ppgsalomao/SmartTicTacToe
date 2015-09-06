@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 import br.com.salomao.smarttictactoe.R;
-import br.com.salomao.smarttictactoe.model.GameConfiguration;
-import br.com.salomao.smarttictactoe.model.GameLevelEnum;
-import br.com.salomao.smarttictactoe.model.GameStarterEnum;
-import br.com.salomao.smarttictactoe.model.SymbolEnum;
+import br.com.salomao.smarttictactoe.model.configuration.GameConfiguration;
+import br.com.salomao.smarttictactoe.model.configuration.GameLevelEnum;
+import br.com.salomao.smarttictactoe.model.configuration.GameStarterEnum;
+import br.com.salomao.smarttictactoe.model.configuration.SymbolEnum;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
