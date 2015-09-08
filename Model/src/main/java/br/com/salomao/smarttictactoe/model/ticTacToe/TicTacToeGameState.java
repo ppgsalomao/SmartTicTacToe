@@ -18,7 +18,7 @@ public class TicTacToeGameState implements GameState {
 
     public GameResultEnum getResult() {
         // TODO: Validate game result.
-        return GameResultEnum.UNDEFINED;
+        return GameResultEnum.COMPUTER_WON;
     }
 
     public GameMarkerEnum getPositionMarker(Position position) {

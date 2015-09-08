@@ -16,6 +16,7 @@ public class TicTacToeGameEngine implements GameEngine {
 
     @Inject
     public TicTacToeGameEngine() {
+        this.startGame(new GameConfiguration());
     }
 
     public GameState startGame(GameConfiguration configuration) {

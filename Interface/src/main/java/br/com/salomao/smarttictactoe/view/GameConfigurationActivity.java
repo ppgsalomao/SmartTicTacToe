@@ -10,11 +10,12 @@ import br.com.salomao.smarttictactoe.model.configuration.GameConfiguration;
 import br.com.salomao.smarttictactoe.model.configuration.GameLevelEnum;
 import br.com.salomao.smarttictactoe.model.configuration.GameStarterEnum;
 import br.com.salomao.smarttictactoe.model.configuration.SymbolEnum;
+import br.com.salomao.smarttictactoe.view.component.BaseActivity;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class GameConfigurationActivity extends AppCompatActivity {
+public class GameConfigurationActivity extends BaseActivity {
 
     @Bind(R.id.game_configuration_level_easy_button)
     Button levelEasyButton;
@@ -44,10 +45,6 @@ public class GameConfigurationActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         this.resetScreenStateToDefault();
-    }
-
-    public int getCompatColor(int colorResourceId) {
-        return ContextCompat.getColor(this, colorResourceId);
     }
 
     private void resetScreenStateToDefault() {

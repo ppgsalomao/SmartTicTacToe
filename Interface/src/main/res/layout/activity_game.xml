@@ -7,6 +7,7 @@
     style="@style/containerStyle">
 
     <RelativeLayout
+        android:id="@+id/game_container_view"
         android:layout_centerInParent="true"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -81,5 +82,14 @@
             android:layout_below="@id/game_3x2_button"
             style="@style/lastLineGameButtonStyle" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/game_result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_container_view"
+        android:text="Deu velha!"
+        style="@style/resultTextViewStyle"
+        />
 
 </RelativeLayout>
