@@ -55,7 +55,7 @@ public class GameActivity extends BaseActivity {
         setContentView(R.layout.activity_game);
 
         // Injection
-        DaggerGameUIComponent.create().inject(this);
+        DaggerGameUIComponent.Initializer.init(this).inject(this);
         ButterKnife.bind(this);
 
         Serializable gameConfigurationSerializableExtra =

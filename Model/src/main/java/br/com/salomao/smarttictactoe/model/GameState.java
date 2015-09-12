@@ -9,4 +9,5 @@ public interface GameState {
     void markPosition(Position position, GameMarkerEnum marker);
     List<Position> getFreePositions();
 
+    int getStateNumberRepresentation();
 }

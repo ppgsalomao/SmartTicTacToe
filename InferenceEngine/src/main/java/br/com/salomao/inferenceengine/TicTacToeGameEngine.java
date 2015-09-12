@@ -1,39 +1,70 @@
 package br.com.salomao.inferenceengine;
 
+import android.content.Context;
+import android.util.Log;
+
 import java.util.List;
 
 import javax.inject.Inject;
 
+import br.com.salomao.knowledgedatabase.TicTacToeKnowledgeDatabaseProcessor;
 import br.com.salomao.smarttictactoe.model.GameEngine;
 import br.com.salomao.smarttictactoe.model.GameMarkerEnum;
-import br.com.salomao.smarttictactoe.model.GameResultBuilder;
 import br.com.salomao.smarttictactoe.model.GameResultEnum;
 import br.com.salomao.smarttictactoe.model.GameState;
-import br.com.salomao.smarttictactoe.model.ticTacToe.TicTacToeGameState;
+import br.com.salomao.smarttictactoe.model.KnowledgeDatabaseProcessor;
 import br.com.salomao.smarttictactoe.model.Position;
 import br.com.salomao.smarttictactoe.model.configuration.GameConfiguration;
 import br.com.salomao.smarttictactoe.model.configuration.GameStarterEnum;
+import br.com.salomao.smarttictactoe.model.ticTacToe.TicTacToeGameState;
 
 public class TicTacToeGameEngine implements GameEngine {
 
+    private KnowledgeDatabaseProcessor knowledgeDatabaseProcessor;
     private TicTacToeGameState state;
 
     @Inject
-    public TicTacToeGameEngine() {
+    public TicTacToeGameEngine(Context context) {
+        this.knowledgeDatabaseProcessor = new TicTacToeKnowledgeDatabaseProcessor(context);
         this.startGame(new GameConfiguration());
     }
 
     public GameState startGame(GameConfiguration configuration) {
-
+        // Create state of beginning.
         this.state = new TicTacToeGameState();
 
-
-        // TODO: Get From Knowlegde Database. First computer move on the center
-        if(configuration.getGameStarter().equals(GameStarterEnum.COMPUTER)) {
-            this.state.markPosition(new Position(1, 1), GameMarkerEnum.COMPUTER);
+        try {
+            // Initialize Knowledge Database, based on game configuration.
+            switch (configuration.getGameLevel()) {
+                case HARD:
+                    if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_hard);
+                    else
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_hard);
+                    break;
+                case MEDIUM:
+                    if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_medium);
+                    else
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_medium);
+                    break;
+                case EASY:
+                default:
+                    if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_easy);
+                    else
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_easy);
+                    break;
+            }
+        } catch(Exception e) {
+            Log.e("GameEngine", "Failed to load Knowledge Database file.", e);
         }
 
-        // TODO: Use game level to load Knowledge Database.
+        if(configuration.getGameStarter().equals(GameStarterEnum.COMPUTER)) {
+            Position nextComputerMove = this.getNextComputerMove();
+            if(nextComputerMove != null)
+                this.state.markPosition(nextComputerMove, GameMarkerEnum.COMPUTER);
+        }
 
         return this.state;
     }
@@ -51,23 +82,27 @@ public class TicTacToeGameEngine implements GameEngine {
             this.state.markPosition(position, GameMarkerEnum.USER);
 
             GameResultEnum result = this.state.getResult();
-            List<Position> freePositions = this.state.getFreePositions();
-            if(freePositions != null && freePositions.size() > 0 && result.equals(GameResultEnum.UNDEFINED)) {
-                Position computerPosition = null;
-                // TODO: mark computer play from Knowledge database.
-
-                // If no position to play is found, choose one randomly.
-                if(computerPosition == null) {
-                    if(freePositions.size() > 0) {
-                        int random = (int) (freePositions.size() * Math.random());
-                        computerPosition = freePositions.get(random);
-                    }
-                }
-
-                this.state.markPosition(computerPosition, GameMarkerEnum.COMPUTER);
+            Position computerNextMove = this.getNextComputerMove();
+            if(result.equals(GameResultEnum.UNDEFINED) && computerNextMove != null) {
+                this.state.markPosition(computerNextMove, GameMarkerEnum.COMPUTER);
             }
         }
 
         return this.state;
+    }
+
+    private Position getNextComputerMove() {
+        Position computerPosition = this.knowledgeDatabaseProcessor.calculateNextComputerMove(this.state);
+
+        // If no position to play is found, choose one randomly.
+        if(computerPosition == null) {
+            List<Position> freePositions = this.state.getFreePositions();
+            if(freePositions.size() > 0) {
+                int random = (int) (freePositions.size() * Math.random());
+                computerPosition = freePositions.get(random);
+            }
+        }
+
+        return computerPosition;
     }
 }

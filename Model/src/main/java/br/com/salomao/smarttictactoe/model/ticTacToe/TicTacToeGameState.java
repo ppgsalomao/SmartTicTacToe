@@ -149,4 +149,9 @@ public class TicTacToeGameState implements GameState {
         }
         return freePositions;
     }
+
+    @Override
+    public int getStateNumberRepresentation() {
+        return this.state;
+    }
 }
