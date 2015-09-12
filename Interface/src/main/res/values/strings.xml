@@ -19,5 +19,8 @@
     <string name="game.configuration.play">Jogar</string>
 
     <!-- Game -->
+    <string name="game.result.userWon">Parabéns, você venceu!\n=)</string>
+    <string name="game.result.computerWon">Não foi dessa vez, você perdeu!\n=(</string>
+    <string name="game.result.draw">Deu velha!\n=|</string>
 
 </resources>
