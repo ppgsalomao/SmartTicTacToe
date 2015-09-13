@@ -12,10 +12,6 @@ public enum GameResultEnum {
         this.winPositions = new ArrayList<>();
     }
 
-    GameResultEnum(List<Position> winPositions) {
-        this.winPositions = winPositions;
-    }
-
     public List<Position> getWinPositions() {
         return winPositions;
     }
