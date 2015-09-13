@@ -154,4 +154,36 @@ public class TicTacToeGameState implements GameState {
     public int getStateNumberRepresentation() {
         return this.state;
     }
+
+    @Override
+    public String toPrettyString() {
+        StringBuilder prettyString = new StringBuilder();
+
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(0, 0))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(1, 0))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(2, 0))) + " \n");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(0, 1))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(1, 1))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(2, 1))) + " \n");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(0, 2))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(1, 2))) + " |");
+        prettyString.append(" " + this.getMarkerString(this.getPositionMarker(new Position(2, 2))) + " ");
+
+        return prettyString.toString();
+    }
+
+    private String getMarkerString(GameMarkerEnum marker) {
+        if(marker == null)
+            return " ";
+
+        switch (marker) {
+            case USER:
+                return "U";
+            case COMPUTER:
+                return "C";
+            case NONE:
+            default:
+                return " ";
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package br.com.salomao.knowledgedatabase;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
 
 import com.google.gson.Gson;
@@ -96,14 +97,62 @@ public class TicTacToeKnowledgeDatabaseProcessor implements KnowledgeDatabasePro
                 for (KnowledgeDatabaseFile.Move move : knowledgeDatabaseFile.getMoves()) {
                     Position nextMove = this.convertToPosition(move.getNextMove());
                     if(nextMove != null) {
-
-                        // TODO: deal with rotations.
-
                         GameState state = this.convertToGameState(move.getState());
+                        this.validateDatabaseState(state, nextMove);
+                        this.movesKnwoledgeDatabase.append(state.getStateNumberRepresentation(), nextMove);
+
+                        state = this.rotateClockwiseState(state);
+                        nextMove = this.rotateClockwisePosition(nextMove);
+                        this.validateDatabaseState(state, nextMove);
+                        this.movesKnwoledgeDatabase.append(state.getStateNumberRepresentation(), nextMove);
+
+                        state = this.rotateClockwiseState(state);
+                        nextMove = this.rotateClockwisePosition(nextMove);
+                        this.validateDatabaseState(state, nextMove);
+                        this.movesKnwoledgeDatabase.append(state.getStateNumberRepresentation(), nextMove);
+
+                        state = this.rotateClockwiseState(state);
+                        nextMove = this.rotateClockwisePosition(nextMove);
+                        this.validateDatabaseState(state, nextMove);
                         this.movesKnwoledgeDatabase.append(state.getStateNumberRepresentation(), nextMove);
                     }
                 }
         }
+    }
+
+    public void validateDatabaseState(GameState state, Position nextMove) {
+        if(state == null || nextMove == null)
+            throw new IllegalStateException("State or position null for Knowledge Database");
+
+        GameMarkerEnum marker = state.getPositionMarker(nextMove);
+        if(marker == null || !marker.equals(GameMarkerEnum.NONE))
+            throw new IllegalStateException("Next move on position already filled");
+    }
+
+    public GameState rotateClockwiseState(GameState state) {
+        GameState rotatedState = new TicTacToeGameState();
+
+        for (int column = 0; column < 3; column++) {
+            for (int row = 0; row < 3; row++) {
+                Position originalPosition = new Position(column, row);
+                rotatedState.markPosition(
+                        this.rotateClockwisePosition(originalPosition),
+                        state.getPositionMarker(originalPosition));
+            }
+        }
+
+        return rotatedState;
+    }
+
+    public Position rotateClockwisePosition(Position position) {
+        if(position == null)
+            return null;
+
+        int column = position.getRow();
+        if(column != 1)
+            column = column ^ 0x2;
+
+        return new Position(column, position.getColumn());
     }
 
     @Override

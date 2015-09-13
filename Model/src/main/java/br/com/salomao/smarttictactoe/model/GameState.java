@@ -10,4 +10,6 @@ public interface GameState {
     List<Position> getFreePositions();
 
     int getStateNumberRepresentation();
+
+    String toPrettyString();
 }
