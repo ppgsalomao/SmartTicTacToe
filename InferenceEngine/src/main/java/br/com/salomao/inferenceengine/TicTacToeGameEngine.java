@@ -29,6 +29,7 @@ public class TicTacToeGameEngine implements GameEngine {
         this.startGame(new GameConfiguration());
     }
 
+    @Override
     public GameState startGame(GameConfiguration configuration) {
         // Create state of beginning.
         this.state = new TicTacToeGameState();
@@ -69,6 +70,7 @@ public class TicTacToeGameEngine implements GameEngine {
         return this.state;
     }
 
+    @Override
     public GameState userMarkedPosition(Position position) {
         if(position == null)
             throw new IllegalArgumentException("Invalid position. Should not be null.");
