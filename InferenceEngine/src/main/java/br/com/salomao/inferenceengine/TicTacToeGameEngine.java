@@ -39,20 +39,20 @@ public class TicTacToeGameEngine implements GameEngine {
             switch (configuration.getGameLevel()) {
                 case HARD:
                     if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
-                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_hard);
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.computer_first_player_hard);
                     else
                         this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_hard);
                     break;
                 case MEDIUM:
                     if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
-                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_medium);
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.computer_first_player_medium);
                     else
                         this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_medium);
                     break;
                 case EASY:
                 default:
                     if (configuration.getGameStarter().equals(GameStarterEnum.COMPUTER))
-                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_easy);
+                        this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.computer_first_player_easy);
                     else
                         this.knowledgeDatabaseProcessor.loadKnowledgeDatabaseFromFile(R.raw.user_first_player_easy);
                     break;
