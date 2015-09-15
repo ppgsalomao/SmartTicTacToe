@@ -39,11 +39,7 @@ public class GameConfigurationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_configuration);
         ButterKnife.bind(this);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
         this.resetScreenStateToDefault();
     }
 
