@@ -65,14 +65,18 @@ public class GameActivity extends BaseActivity {
             this.gameConfiguration = (GameConfiguration) gameConfigurationSerializableExtra;
         }
 
+        this.restartGame();
+    }
+
+    private void restartGame() {
         GameState initialGameState = this.gameEngine.startGame(this.gameConfiguration);
         this.updateScreenForState(initialGameState);
     }
 
     private void updateScreenForState(GameState state) {
         ButterKnife.apply(this.gameButtons, BUTTON_MARKER_SETTER, state);
-        GameResultEnum result = state.getResult();
 
+        GameResultEnum result = state.getResult();
         this.fillWinPositionsBackground(result);
         this.updateResultTextView(result);
     }
@@ -84,14 +88,7 @@ public class GameActivity extends BaseActivity {
                     Position buttonPosition = GameActivity.this.getButtonPosition(button);
                     GameMarkerEnum buttonMarker = state.getPositionMarker(buttonPosition);
                     GameActivity.this.configureButtonText(button, buttonMarker);
-                }
-            };
-
-    ButterKnife.Setter<Button, Integer> BUTTON_BACKGROUND_COLOR_SETTER =
-            new ButterKnife.Setter<Button, Integer>() {
-                @Override
-                public void set(Button button, Integer color, int index) {
-                    button.setBackgroundColor(color);
+                    button.setBackgroundColor(GameActivity.this.getCompatColor(R.color.white));
                 }
             };
 
@@ -106,6 +103,15 @@ public class GameActivity extends BaseActivity {
 
     }
 
+    @OnClick(R.id.game_back_button)
+    public void onBackButtonClicked() {
+        super.onBackPressed();
+    }
+
+    @OnClick(R.id.game_restart_button)
+    public void onRestartButtonClicked() {
+        this.restartGame();
+    }
 
     private void configureButtonText(Button button, GameMarkerEnum marker) {
         SymbolEnum symbol = this.getMarkerSymbol(marker);

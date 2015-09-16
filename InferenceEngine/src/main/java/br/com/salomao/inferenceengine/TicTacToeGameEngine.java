@@ -79,14 +79,18 @@ public class TicTacToeGameEngine implements GameEngine {
         if(position.getColumn() >= 3)
             throw new IllegalArgumentException("Invalid column value. Max of 2.");
 
-        GameMarkerEnum marker = this.state.getPositionMarker(position);
-        if(marker != null && marker.equals(GameMarkerEnum.NONE)) {
-            this.state.markPosition(position, GameMarkerEnum.USER);
+        GameResultEnum result = this.state.getResult();
+        if(result.equals(GameResultEnum.UNDEFINED)) {
 
-            GameResultEnum result = this.state.getResult();
-            Position computerNextMove = this.getNextComputerMove();
-            if(result.equals(GameResultEnum.UNDEFINED) && computerNextMove != null) {
-                this.state.markPosition(computerNextMove, GameMarkerEnum.COMPUTER);
+            GameMarkerEnum marker = this.state.getPositionMarker(position);
+            if (marker != null && marker.equals(GameMarkerEnum.NONE)) {
+                this.state.markPosition(position, GameMarkerEnum.USER);
+
+                result = this.state.getResult();
+                Position computerNextMove = this.getNextComputerMove();
+                if (result.equals(GameResultEnum.UNDEFINED) && computerNextMove != null) {
+                    this.state.markPosition(computerNextMove, GameMarkerEnum.COMPUTER);
+                }
             }
         }
 

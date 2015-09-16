@@ -6,89 +6,118 @@
     tools:context="br.com.salomao.smarttictactoe.view.GameActivity"
     style="@style/containerStyle">
 
-    <RelativeLayout
-        android:id="@+id/game_container_view"
+    <LinearLayout
         android:layout_centerInParent="true"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        style="@style/gameContainerStyle">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/game_1x1_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentLeft="true"
-            style="@style/gameButtonStyle"/>
+        <RelativeLayout
+            android:id="@+id/game_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/gameContainerStyle">
 
-        <Button
-            android:id="@+id/game_2x1_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_centerHorizontal="true"
-            style="@style/gameButtonStyle" />
+            <Button
+                android:id="@+id/game_1x1_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentLeft="true"
+                style="@style/gameButtonStyle"/>
 
-        <Button
-            android:id="@+id/game_3x1_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentRight="true"
-            style="@style/gameButtonStyle" />
+            <Button
+                android:id="@+id/game_2x1_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_centerHorizontal="true"
+                style="@style/gameButtonStyle" />
 
-        <Button
-            android:id="@+id/game_1x2_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/game_1x1_button"
-            style="@style/gameButtonStyle"/>
+            <Button
+                android:id="@+id/game_3x1_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentRight="true"
+                style="@style/gameButtonStyle" />
 
-        <Button
-            android:id="@+id/game_2x2_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/game_2x1_button"
-            style="@style/gameButtonStyle" />
+            <Button
+                android:id="@+id/game_1x2_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_1x1_button"
+                style="@style/gameButtonStyle"/>
 
-        <Button
-            android:id="@+id/game_3x2_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/game_3x1_button"
-            style="@style/gameButtonStyle" />
+            <Button
+                android:id="@+id/game_2x2_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/game_2x1_button"
+                style="@style/gameButtonStyle" />
 
-        <Button
-            android:id="@+id/game_1x3_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/game_1x2_button"
-            style="@style/lastLineGameButtonStyle"/>
+            <Button
+                android:id="@+id/game_3x2_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/game_3x1_button"
+                style="@style/gameButtonStyle" />
 
-        <Button
-            android:id="@+id/game_2x3_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/game_2x2_button"
-            style="@style/lastLineGameButtonStyle" />
+            <Button
+                android:id="@+id/game_1x3_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/game_1x2_button"
+                style="@style/lastLineGameButtonStyle"/>
 
-        <Button
-            android:id="@+id/game_3x3_button"
-            android:layout_width="98dp"
-            android:layout_height="98dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/game_3x2_button"
-            style="@style/lastLineGameButtonStyle" />
-    </RelativeLayout>
+            <Button
+                android:id="@+id/game_2x3_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/game_2x2_button"
+                style="@style/lastLineGameButtonStyle" />
 
-    <TextView
-        android:id="@+id/game_result_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/game_container_view"
-        style="@style/resultTextViewStyle"
-        />
+            <Button
+                android:id="@+id/game_3x3_button"
+                android:layout_width="98dp"
+                android:layout_height="98dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/game_3x2_button"
+                style="@style/lastLineGameButtonStyle" />
+        </RelativeLayout>
 
+        <TextView
+            android:id="@+id/game_result_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/resultTextViewStyle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+                android:id="@+id/game_back_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/configurationPlayButtonStyle"
+                android:text="@string/game.back.button.label"
+                />
+
+            <br.com.salomao.smarttictactoe.view.component.RoundRectButton
+                android:id="@+id/game_restart_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/configurationPlayButtonStyle"
+                android:text="@string/game.restart.button.label"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>

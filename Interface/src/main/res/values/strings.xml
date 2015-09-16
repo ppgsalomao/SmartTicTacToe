@@ -23,4 +23,8 @@
     <string name="game.result.computerWon">Não foi dessa vez, você perdeu!\n=(</string>
     <string name="game.result.draw">Deu velha!\n=|</string>
 
+    <string name="game.back.button.label">Voltar</string>
+    <string name="game.restart.button.label">Recomeçar</string>
+
+
 </resources>
